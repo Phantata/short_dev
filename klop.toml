@@ -1,0 +1,37 @@
+[package]
+name = "eth-types"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+ethers-core.workspace = true
+ethers-signers.workspace = true
+hex.workspace = true
+lazy_static.workspace = true
+once_cell.workspace = true
+halo2_proofs.workspace = true
+regex.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+serde_with = "1.12"
+uint = "0.9.1"
+itertools.workspace = true
+subtle.workspace = true
+sha3.workspace = true
+num.workspace = true
+num-bigint.workspace = true
+strum_macros.workspace = true
+strum.workspace = true
+hash-circuit.workspace = true
+
+[features]
+default = ["warn-unimplemented"]
+warn-unimplemented = []
+shanghai = []
+scroll = []
+
+# trace heap allocation related feature switches
+enable-stack = []
+enable-memory = []
+enable-storage = []
